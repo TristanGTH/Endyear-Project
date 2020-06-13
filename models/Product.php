@@ -27,3 +27,18 @@ function getProductByCategory($id){
     return $resultQuery;
 
 }
+
+function getProduct($id){
+
+    $db = dbConnect();
+
+    $query = $db->prepare('SELECT * FROM products WHERE id = ?');
+    $result = $query->execute([
+        $id
+    ]);
+
+    $resultQuery = $query->fetch();
+
+    return $resultQuery;
+
+}

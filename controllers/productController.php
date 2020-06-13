@@ -22,10 +22,14 @@ if (isset($_GET['action'])) {
 
 
             require 'views/productList.php';
+            break;
 
 
 
         case 'info':
+            $products = getAllProduct();
+            $product = getProduct($_GET['product_id']);
+
 
             require 'views/productInfo.php';
 
