@@ -38,7 +38,7 @@ function addProduct($info){
         if (in_array($my_file_extension, $allowed_extensions)) {
 
             $new_file_name = $artistId . '.' . $my_file_extension;
-            $destination = '../assets/images/artists/' . $new_file_name;
+            $destination = '../assets/images/products/' . $new_file_name;
             $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
             //update du nom de l'image de l'enregistrement d'id
@@ -78,7 +78,7 @@ function updateProduct($id, $info){
 
 
 
-        unlink('../assets/images/artists/'.$id.'.' . $img_extention);
+        unlink('../assets/images/products/'.$id.'.' . $img_extention);
 
         $artistId = $id;
 
@@ -88,7 +88,7 @@ function updateProduct($id, $info){
         if (in_array($my_file_extension, $allowed_extensions)) {
 
             $new_file_name = $artistId . '.' . $my_file_extension;
-            $destination = '../assets/images/artists/' . $new_file_name;
+            $destination = '../assets/images/products/' . $new_file_name;
             $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
             //update du nom de l'image de l'enregistrement d'id
@@ -119,7 +119,7 @@ function deleteProduct($id){
     $result = $query->fetch();
 
     $img_extention = pathinfo($result['main_image'], PATHINFO_EXTENSION);
-    unlink('../assets/images/artists/'.$id.'.' . $img_extention);
+    unlink('../assets/images/products/'.$id.'.' . $img_extention);
 
     $query = $db->prepare('DELETE FROM products WHERE id=?');
     $result = $query->execute([

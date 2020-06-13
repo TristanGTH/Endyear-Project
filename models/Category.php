@@ -10,3 +10,18 @@ function getAllCategory(){
 
     return $result;
 }
+
+function getCategory($id){
+
+    $db = dbConnect();
+
+    $query = $db->prepare('SELECT * FROM categories WHERE id = ?');
+    $result = $query->execute([
+        $id
+    ]);
+
+    $resultQuery = $query->fetch();
+
+    return $resultQuery;
+
+}

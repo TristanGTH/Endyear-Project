@@ -1,0 +1,24 @@
+footer{
+    width: 100%;
+    background-color: #121619;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainer{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 90px;
+}
+
+.footerElement{
+    font-size: 20px;
+    text-align: center;
+}
+
+.footerLogo{
+    width: 200px;
+}

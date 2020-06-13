@@ -1,0 +1,39 @@
+.categoryInfo{
+    margin: auto;
+    width: 85%;
+    background-color: #121619;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.productContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.displayProduct{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productInfo{
+    text-align: center;
+    width: 20%;
+    padding: 17px;
+}
+
+.productImage{
+    width: 100%;
+}

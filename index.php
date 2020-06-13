@@ -1,6 +1,8 @@
 <?php
 
 require 'helpers.php';
+require 'assets/headAssets/headAssets.html';
+
 
 
 if (isset($_GET['controller'])){
@@ -11,10 +13,6 @@ if (isset($_GET['controller'])){
 
         case 'users':
             require 'controllers/userController.php';
-            break;
-
-        case 'categories':
-            require 'controllers/categoryController.php';
             break;
 
         case 'products':

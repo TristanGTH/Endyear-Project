@@ -8,9 +8,9 @@
         </div>
 
         <nav class="headerNav">
-            <a href="">Accueil</a>
-            <a href="">Catégorie</a>
-            <a href="">Produit</a>
+            <a href="index.php">Accueil</a>
+            <a href="index.php?controller=products&action=list&category_id=1">Catégories</a>
+            <a href="index.php?controller=products&action=list">Produits</a>
             <a href="">Contact</a>
         </nav>
 

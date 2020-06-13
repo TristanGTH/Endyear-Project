@@ -38,7 +38,7 @@
                     <button class="categoryButton"><?= $category['name'] ?></button>
                     <?php foreach ($products as $product) : ?>
                         <?php if ($product['category_id'] == $category['id']) : ?>
-                            <p><a><?= $product['name'] ?></a></p>
+                            <p class="productName"><a><?= $product['name'] ?></a></p>
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
@@ -47,6 +47,11 @@
 
         </div>
     </section>
+
+    <?php require 'assets/partials/footer.php' ?>
+
+
+
 
 </body>
 </html>
