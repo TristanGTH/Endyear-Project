@@ -2,6 +2,7 @@
 
 require 'helpers.php';
 require 'assets/headAssets/headAssets.html';
+session_start();
 
 
 
@@ -24,8 +25,18 @@ if (isset($_GET['controller'])){
             break;
 
 
+        case 'userInfo' :
+            require 'controllers/userInfoController.php';
+            break;
+
+        case 'register' :
+            require 'controllers/registerController.php';
+            break;
+
+
         default:
             require 'controllers/indexController.php';
+            break;
 
 
     }

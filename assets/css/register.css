@@ -1,0 +1,48 @@
+.containerLoginTitle{
+    width: 100%;
+    text-align: center;
+}
+
+
+.loginTitle{
+    font-size: 70px;
+}
+
+.containerLogin{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.formLogin{
+    width: 80%;
+    background-color: #FEB64E;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.formPlacement{
+    width: 40%;
+    padding: 50px;
+}
+
+label{
+    font-size: 40px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 20px;
+}
+
+.submit{
+    background-color: #121619;
+    color: white;
+}

@@ -1,5 +1,9 @@
 <?php
 
+if (isset($_SESSION['user'])){
+    header('location: index.php?controller=userInfo');
+}
+
 require 'models/User.php';
 
 if (!empty($_POST['email']) AND !empty($_POST['password'])){
@@ -7,8 +11,8 @@ if (!empty($_POST['email']) AND !empty($_POST['password'])){
     $user = connectUser($_POST['email'],$_POST['password']);
 
     if ($user){
-        session_start();
         $_SESSION['user'] = $user;
+        header("location: index.php?controller=userInfo");
     }
 
     else{

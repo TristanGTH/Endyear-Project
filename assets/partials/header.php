@@ -24,6 +24,6 @@
 <div class="belowHeader">
     <div class="headerUserContainer">
         <a href="index.php?controller=login">Connexion</a>
-        <a href="">Inscription</a>
+        <a href="index.php?controller=register">Inscription</a>
     </div>
 </div>

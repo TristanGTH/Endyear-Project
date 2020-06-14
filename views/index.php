@@ -13,6 +13,8 @@
 
     <?php require 'assets/partials/header.php' ?>
 
+    <?php unset($_SESSION['user']); ?>
+
     <section class="titleContainer">
         <h1 class="title">MANGWA | UNE NOUVELLE AVENTURE A CHAQUE TOME</h1>
     </section>

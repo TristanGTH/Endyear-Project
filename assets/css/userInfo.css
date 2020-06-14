@@ -1,0 +1,69 @@
+.containerUserTitle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.userTitle{
+    font-size: 50px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.userSubTitle{
+    font-size: 30px;
+    margin: 0;
+}
+
+
+
+.userInfoTitle{
+    font-size: 50px;
+}
+
+.updateInfo{
+    width:40%;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.labelUpdate{
+    font-size: 20px;
+}
+
+.submit{
+    background-color: #FEB64E;
+    color: #FFFFFF;
+}
+
+
+.containerUserOrder{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.displayOrder{
+    width: 70%;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderPlacement{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}

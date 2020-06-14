@@ -5,7 +5,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mon premier e-commerce</title>
-    <link rel="stylesheet" href="assets/css/login.css"
+    <link rel="stylesheet" href="assets/css/register.css"
 </head>
 <body>
 
@@ -16,7 +16,7 @@
     </div>
 
     <div class="containerLoginTitle">
-        <h1>CONNECTEZ VOUS A VOTRE COMPTE</h1>
+        <h1>CREE VOTRE COMPTE</h1>
     </div>
 
 
@@ -26,13 +26,22 @@
 
                 <form action="" method="post" class="login">
 
+                    <label for="lastname">Nom de famille :</label><br><br>
+                    <input type="text" placeholder="Nom de famille" name="lastname" id="lastname"><br><br>
+
+                    <label for="firstname">Prénom :</label><br><br>
+                    <input type="text" placeholder="Prénom" name="firstname" id="firstname"><br><br>
+
                     <label for="email">Email :</label><br><br>
                     <input type="text" placeholder="Email" name="email" id="email"><br><br>
+
+                    <label for="adress">Adresse :</label><br><br>
+                    <input type="text" placeholder="Adresse" name="adress" id="adress"><br><br>
 
                     <label for="password">Mot de passe :</label><br><br>
                     <input type="password" placeholder="Mot de passe" name="password" id="password"><br><br>
 
-                    <input type="submit" name="connect" value="Connexion" class="submit">
+                    <input type="submit" name="register" value="Inscription" class="submit">
 
 
 
