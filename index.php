@@ -19,8 +19,8 @@ if (isset($_GET['controller'])){
             require 'controllers/productController.php';
             break;
 
-        case 'orders' :
-            require 'controllers/orderController.php';
+        case 'login' :
+            require 'controllers/loginController.php';
             break;
 
 

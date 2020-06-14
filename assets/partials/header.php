@@ -23,7 +23,7 @@
 
 <div class="belowHeader">
     <div class="headerUserContainer">
-        <a href="">Connexion</a>
+        <a href="index.php?controller=login">Connexion</a>
         <a href="">Inscription</a>
     </div>
 </div>
