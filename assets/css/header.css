@@ -58,4 +58,8 @@ header{
     padding-bottom: 5px;
 }
 
-
+.iconContainer{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}

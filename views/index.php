@@ -13,7 +13,7 @@
 
     <?php require 'assets/partials/header.php' ?>
 
-    <?php unset($_SESSION['user']); ?>
+    <?php var_dump($_POST) ?>
 
     <section class="titleContainer">
         <h1 class="title">MANGWA | UNE NOUVELLE AVENTURE A CHAQUE TOME</h1>

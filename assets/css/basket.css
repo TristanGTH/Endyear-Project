@@ -1,0 +1,67 @@
+.containerOrderTitle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.containerUserOrder{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.displayOrder{
+    width: 70%;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderPlacement{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketInfoTitle{
+    font-size: 50px;
+}
+
+.noOrder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.containerInfoBasket{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoBasket{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.containerPayout{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+
+.containerPayout img{
+    width: 100%;
+}
+

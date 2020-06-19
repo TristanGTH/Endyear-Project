@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 .userTitle{
@@ -15,10 +15,8 @@
 
 .userSubTitle{
     font-size: 30px;
-    margin: 0;
+    margin-top: 0;
 }
-
-
 
 .userInfoTitle{
     font-size: 50px;
@@ -67,3 +65,34 @@ input{
     display: flex;
     justify-content: space-between;
 }
+
+.formDisconnect{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.disconnect{
+    background-color: #121619;
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.admin{
+    background-color: #FEB64E;
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 30px;
+    padding: 5px;
+
+}
+
+

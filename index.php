@@ -3,6 +3,7 @@
 require 'helpers.php';
 require 'assets/headAssets/headAssets.html';
 session_start();
+$_SESSION['cart'] = [];
 
 
 
@@ -31,6 +32,10 @@ if (isset($_GET['controller'])){
 
         case 'register' :
             require 'controllers/registerController.php';
+            break;
+
+        case 'basket' :
+            require 'controllers/basketController.php';
             break;
 
 

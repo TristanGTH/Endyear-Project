@@ -15,7 +15,15 @@
     <div class="containerUserTitle">
         <h1 class="userTitle">BONJOUR <?= $_SESSION['user']['firstname'] ?> <?= $_SESSION['user']['lastname'] ?></h1>
         <p class="userSubTitle">Bienvenue sur votre espace personnel.</p>
+        <form action="" class="formDisconnect" method="post">
+            <input type="submit" name="disconnect" value="Déconnexion" class="disconnect">
+        </form>
+        <?php if ($_SESSION['user']['is_admin'] == 1) : ?>
+            <button onclick="location.href='admin/index.php'" class="admin">Administration</button>
+        <?php endif; ?>
     </div>
+
+
 
     <section class="containerUserTitle">
 
@@ -33,9 +41,9 @@
             <input name="email" type="email" id="email" value="<?= $_SESSION['user']['email'] ?>"><br><br>
 
             <label class="labelUpdate" for="adress">Adresse :</label><br>
-            <input name="adress" type="text" id="adress" value="<?= $_SESSION['user']['lastname'] ?>"><br><br>
+            <input name="adress" type="text" id="adress" value="<?= $_SESSION['user']['adress'] ?>"><br><br>
 
-            <input type="submit" value="Enregistrer" class="submit">
+            <input type="submit" value="Enregistrer" class="submit" name="update">
 
         </form>
 
@@ -47,18 +55,24 @@
         <h1 class="userInfoTitle">MES COMMANDES</h1>
 
         <div class="containerUserOrder">
-            <?php foreach ($orders as $order) : ?>
-                <?php $infoProduct = getProduct($order['id']) ?>
-                <div class="displayOrder">
-                    <div class="orderPlacement">
-                        <p><?= $infoProduct['name'] ?></p>
+            <?php if (count($orders) > 0) : ?>
+                <?php foreach ($orders as $order) : ?>
+                    <?php $infoProduct = getProduct($order['id']) ?>
+                    <div class="displayOrder">
+                        <div class="orderPlacement">
+                            <p><?= $infoProduct['name'] ?></p>
+                        </div>
+                        <div class="orderPlacement">
+                            <p><?= $order['product_quantity'] ?> Exemplaires</p>
+                            <p><?= $order['product_quantity'] * $order['product_price'] ?>€</p>
+                        </div>
                     </div>
-                    <div class="orderPlacement">
-                        <p><?= $order['product_quantity'] ?> Exemplaires</p>
-                        <p><?= $order['product_quantity'] * $order['product_price'] ?>$</p>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            <?php else: ?>
+            <div class="formDisconnect">
+                <p>Vous n'avez aucune commande en cours</p>
+            </div>
+            <?php endif; ?>
         </div>
 
     </section>

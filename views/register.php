@@ -33,7 +33,7 @@
                     <input type="text" placeholder="Prénom" name="firstname" id="firstname"><br><br>
 
                     <label for="email">Email :</label><br><br>
-                    <input type="text" placeholder="Email" name="email" id="email"><br><br>
+                    <input type="email" placeholder="Email" name="email" id="email"><br><br>
 
                     <label for="adress">Adresse :</label><br><br>
                     <input type="text" placeholder="Adresse" name="adress" id="adress"><br><br>

@@ -14,10 +14,8 @@ if (isset($_POST['register'])){
         $errorMessage = 'Tous les champs sont obligatoire';
     }
     else{
-        $info = $_POST;
-        $verif = checkMail($info);
-        if ($verif == false){
-            $result = addUser($info);
+        if (!checkMail($_POST)){
+            $result = addUser($_POST);
             $user = connectUser($_POST['email'],$_POST['password']);
             $_SESSION['user'] = $user;
 
