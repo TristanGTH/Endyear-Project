@@ -22,3 +22,8 @@ footer{
 .footerLogo{
     width: 200px;
 }
+
+footer a{
+    text-decoration: none;
+    color: #FFFFFF;
+}

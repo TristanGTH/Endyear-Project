@@ -1,6 +1,8 @@
 <?php
 
+require 'models/Order.php';
 require 'models/Product.php';
+require 'models/User.php';
 require 'models/Category.php';
 
 
@@ -32,6 +34,7 @@ if (isset($_GET['action'])) {
 
 
             require 'views/productInfo.php';
+            break;
 
     }
 

@@ -2,6 +2,10 @@
 
 require '../helpers.php';
 require 'assets/headAssets/headAssets.php';
+session_start();
+if ($_SESSION['user']['is_admin'] ==! 1){
+    header('location: ../index.php');
+}
 
 
 if (isset($_GET['controller'])){

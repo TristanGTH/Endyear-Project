@@ -7,6 +7,7 @@ $_SESSION['cart'] = [];
 
 
 
+
 if (isset($_GET['controller'])){
 
 
@@ -36,6 +37,14 @@ if (isset($_GET['controller'])){
 
         case 'basket' :
             require 'controllers/basketController.php';
+            break;
+
+        case 'legalNotice':
+            require 'controllers/legalNoticeController.php';
+            break;
+
+        case 'contact':
+            require 'controllers/contactController.php';
             break;
 
 

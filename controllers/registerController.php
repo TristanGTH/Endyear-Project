@@ -5,7 +5,7 @@ if (isset($_SESSION['user'])){
     header('location: index.php?controller=userInfo');
 }
 
-require 'models/User.php';
+
 
 
 

@@ -1,5 +1,4 @@
 <header>
-
     <div class="headerContainer">
 
         <div class="logoContainer">
@@ -9,16 +8,25 @@
 
         <nav class="headerNav">
             <a href="index.php">Accueil</a>
-            <a href="index.php?controller=products&action=list&category_id=1">Catégories</a>
+            <ul id="menu-deroulant">
+                <li> <a href="index.php?controller=products&action=list&category_id=1">Catégories</a>
+                    <ul>
+                        <?php $categories = getAllCategory() ?>
+                        <?php foreach ($categories as $categoryNav) : ?>
+                            <li><a href="index.php?controller=products&action=list&category_id=<?= $categoryNav['id'] ?>"><?= $categoryNav['name'] ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+            </ul>
             <a href="index.php?controller=products&action=list">Produits</a>
-            <a href="">Contact</a>
+            <a href="index.php?controller=contact">Contact</a>
         </nav>
         
         <div class="iconContainer">
             <?php if (isset($_SESSION['user'])) : ?>
-                <a href="index.php?controller=userInfo"><img src="assets/images/user-white.png"></a>
+                <a href="index.php?controller=userInfo"><img src="assets/images/user-white.png" class="picto"></a>
             <?php endif; ?>
-            <a href="index.php?controller=basket"><img src="assets/images/book-icone.png"></a>
+            <a href="index.php?controller=basket"><img src="assets/images/book-icone.png" class="picto"></a>
         </div>
         
     </div>

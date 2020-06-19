@@ -4,7 +4,10 @@ if (isset($_SESSION['user'])){
     header('location: index.php?controller=userInfo');
 }
 
+require 'models/Order.php';
+require 'models/Product.php';
 require 'models/User.php';
+require 'models/Category.php';
 
 if (!empty($_POST['email']) AND !empty($_POST['password'])){
 
