@@ -21,7 +21,7 @@
     border: 1px solid black;
 }
 
-.buyButton{
+#buyButton{
     width: 80%;
     font-size: 25px;
     background-color: #FEB64E;
@@ -37,10 +37,6 @@
     font-size: 40px;
     text-transform: uppercase;
     padding-bottom: 50px;
-}
-
-.productInfo button{
-    width: 40%;
 }
 
 .otherCategory{
@@ -62,12 +58,17 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.otherProductImage{
+.containerOtherProduct a{
     width: 21%;
+}
+
+.otherProductImage{
+    width: 100%;
 }
 
 

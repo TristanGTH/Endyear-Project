@@ -29,16 +29,21 @@ if (isset($_GET['action'])) {
 
 
         case 'info':
-            $products = getAllProduct();
             $product = getProduct($_GET['product_id']);
+            $products = getProductByCategory($product['category_id']);
 
 
             require 'views/productInfo.php';
             break;
 
+        default:
+            header('location: index.php');
+            break;
+
     }
-
-
+}
+else{
+    header('location: index.php');
 }
 
 

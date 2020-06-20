@@ -29,9 +29,11 @@
 }
 
 .productInfo{
-    text-align: center;
-    width: 20%;
-    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
 }
 
 .productImage{

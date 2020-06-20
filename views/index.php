@@ -19,7 +19,7 @@
     </section>
 
     <section class="imgIndex">
-        <img src="assets/images/reborn2.png">
+        <img src="assets/images/dragonball.jpg">
     </section>
 
     <section class="indexSummary">
@@ -33,13 +33,12 @@
     <section class="categoryIndex">
         <h1 class="title">NOS CATÉGORIES</h1>
         <div class="displayCategory">
-            <!-- FAIRE BOUCLE PHP ICI -->
             <?php foreach ($categories as $category) : ?>
                 <div class="eachCategory">
-                    <button class="categoryButton"><?= $category['name'] ?></button>
+                    <button class="categoryButton" onclick="location.href='index.php?controller=products&action=list&category_id=<?= $category['id'] ?>'"><?= $category['name'] ?></button>
                     <?php foreach ($products as $product) : ?>
                         <?php if ($product['category_id'] == $category['id']) : ?>
-                            <p class="productName"><a><?= $product['name'] ?></a></p>
+                            <p class="productName"><a href="index.php?controller=products&action=info&product_id=<?= $product['id'] ?>"><?= $product['name'] ?></a></p>
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </div>

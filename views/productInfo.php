@@ -15,13 +15,12 @@
 
         <article class="productBuy">
             <img src="assets/images/products/<?= $product['main_image'] ?>" class="productImage">
-            <h2><?= $product['price'] ?>$</h2>
-            <button class="buyButton">Ajouter au Panier</button>
+            <h2><span id="price"><?= $product['price'] ?></span>€</h2>
+            <button id="buyButton">Ajouter au Panier</button>
         </article>
 
         <article class="productInfo">
             <h1 class="productTitle"><?= $product['name'] ?></h1>
-            <button class="buyButton">Ajouter au Panier</button>
             <h1>RESUME DU MANGA</h1>
             <p><?= $product['summary'] ?></p>
         </article>
@@ -36,15 +35,19 @@
 
         <?php for ($i = 0 ; $i <= 3; $i++) : ?>
             <?php $rand = rand(0,sizeof($products)-1); ?>
-
-            <img src="assets/images/products/<?= $products[$rand]['main_image'] ?>" class="otherProductImage">
+            <a href="index.php?controller=products&action=info&product_id=<?= $products[$rand]['id'] ?>"><img src="assets/images/products/<?= $products[$rand]['main_image'] ?>" class="otherProductImage"></a>
         <?php endfor; ?>
 
     </section>
 
+    <?= var_dump($_SESSION['cart']) ?>
+
+    <input type="hidden" id="productId" value="<?= $_GET['product_id'] ?>" >
+
 
     <?php require 'assets/partials/footer.php' ?>
 
+    <script type="text/javascript" src="assets/js/ajaxToBasket.js"></script>
 
 
 </body>

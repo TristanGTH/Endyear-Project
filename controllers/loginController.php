@@ -15,6 +15,7 @@ if (!empty($_POST['email']) AND !empty($_POST['password'])){
 
     if ($user){
         $_SESSION['user'] = $user;
+        $_SESSION['cart'] = [];
         header("location: index.php?controller=userInfo");
     }
 

@@ -2,6 +2,7 @@
 
 if (isset($_POST['disconnect'])){
     unset($_SESSION['user']);
+    unset($_SESSION['cart']);
 }
 
 

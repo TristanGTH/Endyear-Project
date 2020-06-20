@@ -2,14 +2,14 @@
     <div class="headerContainer">
 
         <div class="logoContainer">
-            <img src="assets/images/logo-white.png" class="logo">
-            <p>LA MANGWA</p>
+            <a href="index.php"><img src="assets/images/logo-white.png" class="logo"></a>
+            <a href="index.php">LA MANGWA</a>
         </div>
 
         <nav class="headerNav">
             <a href="index.php">Accueil</a>
             <ul id="menu-deroulant">
-                <li> <a href="index.php?controller=products&action=list&category_id=1">Catégories</a>
+                <li> <a>Catégories</a>
                     <ul>
                         <?php $categories = getAllCategory() ?>
                         <?php foreach ($categories as $categoryNav) : ?>

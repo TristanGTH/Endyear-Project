@@ -18,7 +18,7 @@
 
         <div class="footerElement">
             <h4>A PROPOS</h4>
-            <p><a>Nous contacter</a></p>
+            <p><a href="index.php?controller=contact">Nous contacter</a></p>
             <p><a href="index.php?controller=legalNotice">Mentions légales</a></p>
         </div>
 

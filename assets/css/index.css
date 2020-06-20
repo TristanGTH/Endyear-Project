@@ -30,6 +30,7 @@
 .summary{
     width: 90%;
     font-size: 25px;
+    font-family: 'Rubik', sans-serif;
 }
 
 ul li {
@@ -58,7 +59,7 @@ ul li {
 }
 
 .categoryButton{
-    width: 50%;
+    width: 60%;
     border-style: none;
     font-size: 25px;
     background-color: #FEB64E;
@@ -69,5 +70,12 @@ ul li {
 
 .productName{
     font-size: 25px;
+}
+
+.productName a{
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    color: #121619;
+    font-weight: bold;
 }
 

@@ -1,3 +1,12 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button, input{
+    font-family: inherit;
+}
+
 header{
     width: 100%;
     display: flex;
@@ -18,6 +27,11 @@ header{
 .logoContainer{
     display: flex;
     align-items: center;
+}
+
+.logoContainer a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .logo{
