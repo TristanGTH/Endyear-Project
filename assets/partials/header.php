@@ -28,6 +28,12 @@
             <?php endif; ?>
             <a href="index.php?controller=basket"><img src="assets/images/book-icone.png" class="picto"></a>
         </div>
+
+        <?php if (isset($_SESSION['cart'])) : ?>
+            <div class="countContainer">
+                <span id="nbrCount"><?= count($_SESSION['cart']) ?></span>
+            </div>
+        <?php endif; ?>
         
     </div>
 
@@ -43,3 +49,4 @@
         </div>
     </div>
 <?php endif; ?>
+

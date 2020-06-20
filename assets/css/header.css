@@ -5,6 +5,7 @@ body{
 
 button, input{
     font-family: inherit;
+    outline: none;
 }
 
 header{
@@ -13,6 +14,14 @@ header{
     justify-content: center;
     background-color: #121619;
 
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FEB64E;
 }
 
 .headerContainer{
@@ -115,4 +124,21 @@ header{
 
 #menu-deroulant li:hover ul {
     left: auto;
+}
+
+
+
+.countContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #FEB64E;
+    top: 15px;
+    right: 150px;
+    position: absolute;
+    color: white;
+    border-radius: 50%;
+    font-size: 17px;
 }

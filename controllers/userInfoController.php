@@ -15,7 +15,7 @@ require 'models/Product.php';
 require 'models/User.php';
 require 'models/Category.php';
 
-$orders = getOrder($_SESSION['user']['id']);
+$orders = getAllOrder($_SESSION['user']['id']);
 
 
 

@@ -57,14 +57,14 @@
         <div class="containerUserOrder">
             <?php if (count($orders) > 0) : ?>
                 <?php foreach ($orders as $order) : ?>
-                    <?php $infoProduct = getProduct($order['id']) ?>
+                    <?php $infoProduct = getProduct($order['product_id']) ?>
                     <div class="displayOrder">
                         <div class="orderPlacement">
                             <p><?= $infoProduct['name'] ?></p>
                         </div>
                         <div class="orderPlacement">
-                            <p><?= $order['product_quantity'] ?> Exemplaires</p>
-                            <p><?= $order['product_quantity'] * $order['product_price'] ?>€</p>
+                            <p><?= $order['total_quantity'] ?> Exemplaires</p>
+                            <p><?= $order['total_quantity'] * $order['product_price'] ?>€</p>
                         </div>
                     </div>
                 <?php endforeach; ?>

@@ -19,13 +19,14 @@
         <div class="containerUserOrder">
             <?php if (count($_SESSION['cart']) > 0) : ?>
                 <?php foreach ($_SESSION['cart'] as $cart) : ?>
+                <?php $product = getProduct($cart['productId']) ?>
                     <div class="displayOrder">
                         <div class="orderPlacement">
-                            <p></p>
+                            <p><?= $product['name'] ?></p>
                         </div>
                         <div class="orderPlacement">
-                            <p>Exemplaires</p>
-                            <p>$</p>
+                            <p><?= $cart['quantity'] ?> Exemplaires</p>
+                            <p><?= $cart['price'] * $cart['quantity'] ?>€</p>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -74,7 +75,11 @@
             <div class="containerPayout">
                 <img src="assets/images/carte.png">
             </div>
+            <form method="post">
+                <input type="submit" class="submit" name="confirmOrder" value="Valider le paiement">
+            </form>
         </div>
+
 
     </section>
 

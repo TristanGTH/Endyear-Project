@@ -23,7 +23,7 @@
 
             <?php foreach ($products as $product) : ?>
                 <div class="productInfo">
-                    <img src="assets/images/products/<?= $product['main_image'] ?>" class="productImage">
+                    <a href="index.php?controller=products&action=info&product_id=<?= $product['id'] ?>"><img src="assets/images/products/<?= $product['main_image'] ?>" class="productImage"></a>
                     <p><a href="index.php?controller=products&action=info&product_id=<?= $product['id'] ?>"><?= $product['name'] ?></a></p>
                 </div>
             <?php endforeach; ?>

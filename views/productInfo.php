@@ -40,8 +40,6 @@
 
     </section>
 
-    <?= var_dump($_SESSION['cart']) ?>
-
     <input type="hidden" id="productId" value="<?= $_GET['product_id'] ?>" >
 
 

@@ -42,3 +42,15 @@ function getProduct($id){
     return $resultQuery;
 
 }
+
+function updateQuantity($info,$cart){
+
+    $db = dbConnect();
+
+    $queryUpdate = $db->prepare('UPDATE products SET quantity = ? WHERE id = ?');
+    $queryUpdate->execute([
+        $info,
+        $cart,
+    ]);
+
+}
