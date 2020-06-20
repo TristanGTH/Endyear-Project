@@ -17,6 +17,9 @@
         <section class="col-9">
             <header class="pb-3">
                 <h4><?= $_GET['action'] == 'edit' ? 'Modifier' : 'Ajouter' ?> une catégorie</h4>
+                <?php if (isset($answer)) : ?>
+                <h4><?= $answer ?></h4>
+                <?php endif; ?>
             </header>
 
 

@@ -17,6 +17,9 @@
         <section class="col-9">
             <header class="pb-3">
                 <h4>Ajouter un produit</h4>
+                <?php if (isset($answer)) : ?>
+                    <h4><?= $answer ?></h4>
+                <?php endif; ?>
             </header>
 
             <div class="tab-content">
@@ -72,7 +75,6 @@
                             <input class="btn btn-success" type="submit" name="save" value="Enregistrer" />
                         </div>
 
-                        <!-- Si $article existe, on ajoute un champ caché contenant l'id de l'article à modifier pour la requête UPDATE -->
 
                     </form>
                 </div>

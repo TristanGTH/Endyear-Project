@@ -18,8 +18,10 @@
 
         <main class="col-9">
             <header class="pb-3">
-                <!-- Si $user existe, on affiche "Modifier" SINON on affiche "Ajouter" -->
                 <h4><?= $_GET['action'] == 'edit' ? 'Modifier' : 'Ajouter' ?> un utilisateur</h4>
+                <?php if (isset($answer)) : ?>
+                    <h4><?= $answer ?></h4>
+                <?php endif; ?>
             </header>
 
             <form action="index.php?controller=users&action=<?= isset($user) ? 'edit&id='.$_GET['id'] : 'add';  ?>" method="post">
@@ -40,7 +42,7 @@
                     <input class="form-control" type="text" placeholder="Adresse" name="adress" id="adress" value="<?= isset($user) ? $user['adress'] : '' ?>" />
                 </div>
                 <div class="form-group">
-                    <label for="password">Password : </label>
+                    <label for="password">Mot de passe : </label>
                     <input class="form-control" type="password" placeholder="Mot de passe" name="password" id="password" />
                 </div>
                 <div class="form-group">

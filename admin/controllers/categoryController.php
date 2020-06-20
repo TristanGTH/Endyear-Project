@@ -23,6 +23,7 @@ if (isset($_GET['action'])) {
 
             if (empty($_POST['name']) OR empty($_POST['description']) OR empty($_FILES['image']['name'])){
                 $answer = 'Tout les champs sont obligatoire!';
+                require 'views/categoryViews/categoryForm.php';
             }
             else {
                 $info = $_POST;
@@ -36,7 +37,7 @@ if (isset($_GET['action'])) {
 
                 if (empty($_POST['name']) OR empty($_POST['description']) OR empty($_FILES['image']['name'])){
                     $answer = 'Tout les champs sont obligatoire!';
-                    exit;
+                    require 'views/categoryViews/categoryForm.php';
                 } else {
 
                     $result = updateCategory($_GET['id'], $_POST);

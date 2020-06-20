@@ -22,7 +22,9 @@ if (isset($_GET['action'])){
         case 'add':
 
             if (empty($_POST['firstname']) OR empty($_POST['lastname']) OR empty($_POST['email']) OR empty($_POST['password'])){
-                header('location: erreur1.php');
+                $answer = 'Les champs Nom, Prénom, Email et mot de passe sont obligatoire!';
+                require 'views/UserViews/UserForm.php';
+                break;
             }
             else{
                 $info = $_POST;
@@ -50,8 +52,8 @@ if (isset($_GET['action'])){
             if (!empty($_POST)){
 
                 if (empty($_POST['firstname']) OR empty($_POST['lastname']) OR empty($_POST['email']) OR empty($_POST['password'])){
-                    header('location: erreur1.php');
-                    exit;
+                    $answer = 'Les champs Nom, Prénom, Email et mot de passe sont obligatoire!';
+                    require 'views/userViews/userForm.php';                    exit;
                 }
                 else{
 

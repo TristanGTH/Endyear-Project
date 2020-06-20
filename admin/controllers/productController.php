@@ -21,10 +21,10 @@ if (isset($_GET['action'])) {
             require 'views/productViews/productForm.php';
             break;
         case 'add':
-
+            $categories = getAllCategory();
             if (empty($_POST['name']) OR empty($_POST['summary']) OR empty($_POST['price']) OR empty($_POST['quantity'])){
-                header('location: erreurTest.php');
-            }
+                $answer = 'Les champs Nom, Résumé, Prix, Quantité et Image sont obligatoire!';
+                require 'views/productViews/productForm.php';            }
             else {
                 $info = $_POST;
                 $result = addProduct($info);
@@ -36,8 +36,8 @@ if (isset($_GET['action'])) {
             if (!empty($_POST)) {
 
                 if (empty($_POST['name']) OR empty($_POST['summary']) OR empty($_POST['price']) OR empty($_POST['quantity'])){
-                    header('location: erreur1.php');
-                    exit;
+                    $answer = 'Les champs Nom, Résumé, Prix, Quantité et Image sont obligatoire!';
+                    require 'views/productViews/productForm.php';
                 } else {
 
                     $result = updateProduct($_GET['id'], $_POST);
