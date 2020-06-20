@@ -16,7 +16,18 @@ if (isset($_GET['action'])) {
             break;
 
         case 'info':
+            $orders = getOrderByUser($_GET['user_id']);
+            $user = infoUser($_GET['user_id']);
             require 'views/orderViews/orderInfo.php';
             break;
+
+        default:
+            header('location: index.php');
     }
+
+}
+else{
+
+    header('location: index.php');
+
 }

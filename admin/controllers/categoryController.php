@@ -21,8 +21,8 @@ if (isset($_GET['action'])) {
             break;
         case 'add':
 
-            if (empty($_POST['name'])){
-                header('location: erreurTest.php');
+            if (empty($_POST['name']) OR empty($_POST['description']) OR empty($_FILES['image']['name'])){
+                $answer = 'Tout les champs sont obligatoire!';
             }
             else {
                 $info = $_POST;
@@ -34,8 +34,8 @@ if (isset($_GET['action'])) {
         case 'edit':
             if (!empty($_POST)) {
 
-                if (empty($_POST['name'])){
-                    header('location: erreur1.php');
+                if (empty($_POST['name']) OR empty($_POST['description']) OR empty($_FILES['image']['name'])){
+                    $answer = 'Tout les champs sont obligatoire!';
                     exit;
                 } else {
 
@@ -60,6 +60,9 @@ if (isset($_GET['action'])) {
 
             header('location: index.php?controller=categories&action=list');
             break;
+
+        default:
+            header('location: index.php');
     }
 
 

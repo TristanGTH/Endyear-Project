@@ -1,17 +1,21 @@
 <?php
 
 
+
 if (isset($_SESSION['user'])){
     header('location: index.php?controller=userInfo');
 }
 
-
+require 'models/Order.php';
+require 'models/Product.php';
+require 'models/User.php';
+require 'models/Category.php';
 
 
 
 if (isset($_POST['register'])){
     if (empty($_POST['firstname']) OR empty($_POST['lastname']) OR empty($_POST['email']) OR empty($_POST['adress']) OR empty($_POST['password'])){
-        $errorMessage = 'Tous les champs sont obligatoire';
+        $answer = 'Tous les champs sont obligatoire!';
     }
     else{
         if (!checkMail($_POST)){
@@ -22,7 +26,7 @@ if (isset($_POST['register'])){
             header('location: index.php?controller=userInfo');
         }
         else{
-            $errorMessage = 'Email déja utilisé';
+            $answer = 'Email déja utilisé!';
         }
     }
 }

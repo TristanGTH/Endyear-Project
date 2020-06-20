@@ -36,6 +36,10 @@
                     <input class="form-control"  type="email" placeholder="Email" name="email" id="email" value="<?= isset($user) ? $user['email'] : '' ?>" />
                 </div>
                 <div class="form-group">
+                    <label for="adress">Adresse : </label>
+                    <input class="form-control" type="text" placeholder="Adresse" name="adress" id="adress" value="<?= isset($user) ? $user['adress'] : '' ?>" />
+                </div>
+                <div class="form-group">
                     <label for="password">Password : </label>
                     <input class="form-control" type="password" placeholder="Mot de passe" name="password" id="password" />
                 </div>

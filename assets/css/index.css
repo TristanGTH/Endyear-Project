@@ -28,9 +28,10 @@
 }
 
 .summary{
-    width: 90%;
+    width: 100%;
     font-size: 25px;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 ul li {

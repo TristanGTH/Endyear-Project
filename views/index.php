@@ -27,7 +27,8 @@
         <p class="summary">Le mot « manga » est pleinement intégré dans la langue française, comme l'atteste son intégration dans les dictionnaires usuels.
             Ceux-ci le donnent comme masculin (les mots japonais, eux, n'ont pas de genre grammatical), et c'est le genre qui prédomine largement.
             Toutefois, la première utilisation du mot en français revient à Edmond de Goncourt en 1895, dans une étude artistique dédiée à Hokusai7,
-            où il accorde « manga » au féminin pour désigner ce qu'il appela La Mangwa (sic) de l'artiste.</p>
+            où il accorde « manga » au féminin pour désigner ce qu'il appela La Mangwa (sic) de l'artiste.
+        </p>
     </section>
 
     <section class="categoryIndex">

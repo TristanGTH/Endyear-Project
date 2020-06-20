@@ -32,6 +32,10 @@
                     <label for="password">Mot de passe :</label><br><br>
                     <input type="password" placeholder="Mot de passe" name="password" id="password"><br><br>
 
+                    <?php if (isset($answer)) : ?>
+                        <div class="displayMessage"><?= $answer ?></div><br>
+                    <?php endif; ?>
+
                     <input type="submit" name="connect" value="Connexion" class="submit">
 
 

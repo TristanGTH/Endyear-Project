@@ -21,12 +21,17 @@ $orders = getAllOrder($_SESSION['user']['id']);
 
 if (isset($_POST['update'])){
 
-    $result = updateUser($_SESSION['user']['id'],$_POST);
+    if (!empty($_POST['lastname']) AND !empty($_POST['firstname']) AND !empty($_POST['email']) AND !empty($_POST['adress'])){
+        $result = updateUser($_SESSION['user']['id'],$_POST);
 
-    if ($result){
-        $_SESSION['user'] = getUser($_SESSION['user']['id']);
+        if ($result){
+            $_SESSION['user'] = getUser($_SESSION['user']['id']);
+            $answer = 'Informations mise à jour avec succès!';
+        }
     }
-
+    else{
+        $answer = 'Tous les champs sont obligatoire!';
+    }
 }
 
 

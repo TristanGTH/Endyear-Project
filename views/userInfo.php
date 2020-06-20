@@ -43,6 +43,10 @@
             <label class="labelUpdate" for="adress">Adresse :</label><br>
             <input name="adress" type="text" id="adress" value="<?= $_SESSION['user']['adress'] ?>"><br><br>
 
+            <?php if (isset($answer)) : ?>
+                <div class="displayMessage"><?= $answer ?></div><br>
+            <?php endif; ?>
+
             <input type="submit" value="Enregistrer" class="submit" name="update">
 
         </form>

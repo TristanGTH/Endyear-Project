@@ -11,6 +11,11 @@ require 'models/User.php';
 require 'models/Category.php';
 
 
+if (isset($_POST['delete'])){
+    unset($_SESSION['cart'][$_POST['productId']]);
+}
+
+
 if (isset($_POST['confirmOrder'])){
     foreach ($_SESSION['cart'] as $insertCart){
         $product = getProduct($insertCart['productId']);

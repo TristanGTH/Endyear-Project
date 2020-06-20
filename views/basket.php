@@ -27,6 +27,10 @@
                         <div class="orderPlacement">
                             <p><?= $cart['quantity'] ?> Exemplaires</p>
                             <p><?= $cart['price'] * $cart['quantity'] ?>€</p>
+                            <form method="post">
+                                <input type="hidden" value="<?= $cart['productId'] ?>" name="productId">
+                                <input type="submit" name="delete" value="Supprimer" class="submit">
+                            </form>
                         </div>
                     </div>
                 <?php endforeach; ?>

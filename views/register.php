@@ -16,7 +16,7 @@
     </div>
 
     <div class="containerLoginTitle">
-        <h1>CREE VOTRE COMPTE</h1>
+        <h1>CRÉE VOTRE COMPTE</h1>
     </div>
 
 
@@ -40,6 +40,10 @@
 
                     <label for="password">Mot de passe :</label><br><br>
                     <input type="password" placeholder="Mot de passe" name="password" id="password"><br><br>
+
+                    <?php if (isset($answer)) : ?>
+                        <div class="displayMessage"><?= $answer ?></div><br>
+                    <?php endif; ?>
 
                     <input type="submit" name="register" value="Inscription" class="submit">
 

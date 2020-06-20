@@ -62,7 +62,13 @@ if (isset($_GET['action'])) {
 
             header('location: index.php?controller=products&action=list');
             break;
+
+        default:
+            header('location: index.php');
     }
 
 
+}
+else{
+    header('location: index.php');
 }

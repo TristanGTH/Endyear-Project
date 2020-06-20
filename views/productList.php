@@ -22,10 +22,12 @@
         <section class="displayProduct">
 
             <?php foreach ($products as $product) : ?>
-                <div class="productInfo">
-                    <a href="index.php?controller=products&action=info&product_id=<?= $product['id'] ?>"><img src="assets/images/products/<?= $product['main_image'] ?>" class="productImage"></a>
-                    <p><a href="index.php?controller=products&action=info&product_id=<?= $product['id'] ?>"><?= $product['name'] ?></a></p>
-                </div>
+                <?php if ($product['is_online'] == 1) : ?>
+                    <div class="productInfo">
+                        <a href="index.php?controller=products&action=info&product_id=<?= $product['id'] ?>"><img src="assets/images/products/<?= $product['main_image'] ?>" class="productImage"></a>
+                        <p><a class="productName" href="index.php?controller=products&action=info&product_id=<?= $product['id'] ?>"><?= $product['name'] ?></a></p>
+                    </div>
+                <?php endif; ?>
             <?php endforeach; ?>
 
         </section>

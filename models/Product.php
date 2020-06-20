@@ -53,4 +53,6 @@ function updateQuantity($info,$cart){
         $cart,
     ]);
 
+    return $queryUpdate;
+
 }
